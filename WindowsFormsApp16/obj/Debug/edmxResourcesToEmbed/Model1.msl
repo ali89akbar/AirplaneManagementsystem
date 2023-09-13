@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="airportModelStoreContainer" CdmEntityContainer="airportEntities">
+    <EntitySetMapping Name="adminns">
+      <EntityTypeMapping TypeName="airportModel.adminn">
+        <MappingFragment StoreEntitySet="adminn">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="passwordd" ColumnName="passwordd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_Lookup">
+      <EntityTypeMapping TypeName="airportModel.Type_Lookup">
+        <MappingFragment StoreEntitySet="Type_Lookup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Cover_Case" ColumnName="Cover_Case" />
+          <ScalarProperty Name="Last_Modified_DT" ColumnName="Last_Modified_DT" />
+          <ScalarProperty Name="Last_Modified_By" ColumnName="Last_Modified_By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_details">
+      <EntityTypeMapping TypeName="airportModel.customer_details">
+        <MappingFragment StoreEntitySet="customer_details">
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="fathername" ColumnName="fathername" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookings">
+      <EntityTypeMapping TypeName="airportModel.booking">
+        <MappingFragment StoreEntitySet="booking">
+          <ScalarProperty Name="seatno" ColumnName="seatno" />
+          <ScalarProperty Name="flightid" ColumnName="flightid" />
+          <ScalarProperty Name="dateofjourney" ColumnName="dateofjourney" />
+          <ScalarProperty Name="customerid" ColumnName="customerid" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="flight_details">
+      <EntityTypeMapping TypeName="airportModel.flight_details">
+        <MappingFragment StoreEntitySet="flight_details">
+          <ScalarProperty Name="seats" ColumnName="seats" />
+          <ScalarProperty Name="flight_charges" ColumnName="flight_charges" />
+          <ScalarProperty Name="flight_class" ColumnName="flight_class" />
+          <ScalarProperty Name="departure" ColumnName="departure" />
+          <ScalarProperty Name="arrival_item" ColumnName="arrival_item" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="sources" ColumnName="sources" />
+          <ScalarProperty Name="flight_name" ColumnName="flight_name" />
+          <ScalarProperty Name="fid" ColumnName="fid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

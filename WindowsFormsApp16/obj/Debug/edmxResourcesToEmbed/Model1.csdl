@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="airportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="passwordd" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Type_Lookup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Cover_Case" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Modified_DT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="airportEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminns" EntityType="Self.adminn" />
+    <EntitySet Name="Type_Lookup" EntityType="Self.Type_Lookup" />
+    <EntitySet Name="customer_details" EntityType="airportModel.customer_details" />
+    <EntitySet Name="bookings" EntityType="airportModel.booking" />
+    <EntitySet Name="flight_details" EntityType="airportModel.flight_details" />
+  </EntityContainer>
+  <EntityType Name="customer_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="namee" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="fathername" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="birthdate" Type="DateTime" Precision="0" />
+    <Property Name="email" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="booking">
+    <Key>
+      <PropertyRef Name="ticketid" />
+    </Key>
+    <Property Name="ticketid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customerid" Type="Int32" />
+    <Property Name="dateofjourney" Type="DateTime" Precision="0" />
+    <Property Name="flightid" Type="Int32" />
+    <Property Name="seatno" Type="Int32" />
+  </EntityType>
+  <EntityType Name="flight_details">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="flight_name" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="sources" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="destination" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="arrival_item" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="departure" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="flight_class" Type="String" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Name="flight_charges" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="seats" Type="Int32" />
+  </EntityType>
+</Schema>
